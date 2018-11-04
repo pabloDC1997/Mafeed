@@ -1,11 +1,11 @@
 # MaFeed
-  + Descricao...
+  + Mafeed is a personal lab project. The lab's goal is build a android app that index RSS feed and show it to final user using UX Design.
 
-### Requisitos para execução do fonte
-  + <div  href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"> <p> JDK 1.8 </p> </div>
-  + Android Studio (Recomendado)
-  + Eclipse (Recomendado)
+### Requirements
+  + JDK 1.8
+  + Android Studio (recommended)
+  + Eclipse (recommended)
 
-### Links uteis
-  + Download do app na playStore: ...
+### Links
+  + PlayStore: ...
   
