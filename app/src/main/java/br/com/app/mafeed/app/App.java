@@ -1,6 +1,7 @@
 package br.com.app.mafeed.app;
 
 import android.app.Application;
+import android.content.Context;
 
 import br.com.app.mafeed.utils.TinyDB;
 
@@ -10,20 +11,17 @@ import br.com.app.mafeed.utils.TinyDB;
 
 public class App extends Application {
 
-    TinyDB sharePreference;
-
     @Override
     public void onCreate() {
-        this.sharePreference = new TinyDB(this);
-        this.checkIfUserIsLogged();
         super.onCreate();
-    }
-
-    private void checkIfUserIsLogged() {
     }
 
     @Override
     public void onTerminate() {
         super.onTerminate();
+    }
+
+    public static TinyDB getInstanceTinyDB(Context context) {
+        return new TinyDB(context);
     }
 }
