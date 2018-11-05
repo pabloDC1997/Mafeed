@@ -1,26 +1,13 @@
-### App ###
-
-
-### Servidor ###
-/Servidor/mafeed/.gradle
-/Servidor/mafeed/build/
-/Servidor/mafeed/!gradle/wrapper/gradle-wrapper.jar
-/Servidor/mafeed/.apt_generated
-/Servidor/mafeed/.classpath
-/Servidor/mafeed/.factorypath
-/Servidor/mafeed/.project
-/Servidor/mafeed/.settings
-/Servidor/mafeed/.springBeans
-/Servidor/mafeed/.sts4-cache
-/Servidor/mafeed/.idea
-/Servidor/mafeed/out/
-/Servidor/mafeed/bin
-/Servidor/mafeed/bin
-
-### Comum ###
-*.iws
 *.iml
-*.ipr
-*.pro
-*.classpath
-*.project
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
