@@ -3,7 +3,7 @@
 
 ### Requirements
   + JDK 1.8
-  + Android Studio (recommended)
+  + Android Studio
 
 ### Links
   + PlayStore: ...
