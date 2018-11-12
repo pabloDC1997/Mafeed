@@ -50,4 +50,7 @@ public class ActivityUtils {
         };
     }
 
+    public static void showErrorDialog(Throwable e) {
+
+    }
 }
