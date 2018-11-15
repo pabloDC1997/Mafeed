@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Mafeed</string>
+    <string name="mafeed_font_family">sans-serif</string>
+
+    <string name="default_feed_title">Feed sem titulo</string>
+    <string name="default_feed_description">Feed não possui descrição…</string>
+    <string name="feed_not_found">Feed não encontrado</string>
+    <string name="unexpected_error">erro inesperado</string>
+
 </resources>

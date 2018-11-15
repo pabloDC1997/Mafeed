@@ -12,34 +12,22 @@ import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
  * Created by Pablo on 17/05/2017.
  */
 
-public abstract class RetrofitClient {
+public class RetrofitClient {
 
-    protected Retrofit retrofit;
-    protected String baseURL;
-    private OkHttpClient.Builder client;
-
-    public RetrofitClient(String baseUrl) {
-        buildOkHttpClient();
-        this.baseURL = baseUrl;
-        this.retrofit = getClient(baseUrl);
+    public static Retrofit getClient(String baseUrl) {
+        return  new Retrofit.Builder()
+                .addConverterFactory(SimpleXmlConverterFactory.createNonStrict(new Persister(new AnnotationStrategy())))
+                .client(buildOkHttpClient())
+                .baseUrl(baseUrl)
+                .build();
     }
 
-    private Retrofit getClient(String baseUrl) {
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder()
-                    .addConverterFactory(SimpleXmlConverterFactory.createNonStrict(new Persister(new AnnotationStrategy())))
-                    .client(client.build())
-                    .baseUrl(baseUrl)
-                    .build();
-        }
-        return retrofit;
-    }
-
-    private void buildOkHttpClient() {
-        client = new OkHttpClient.Builder();
+    private static OkHttpClient buildOkHttpClient() {
+        OkHttpClient.Builder client = new OkHttpClient.Builder();
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         client.addInterceptor(loggingInterceptor);
+        return client.build();
     }
 }
 

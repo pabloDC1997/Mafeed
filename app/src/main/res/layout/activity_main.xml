@@ -2,10 +2,34 @@
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.MainActivity"
+    tools:context=".ui.home.MainActivity"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:theme="@style/NoActionBar">
+    android:theme="@style/NoActionBar"
+    android:background="#101011">
 
-    <include layout="@layout/my_toobar"/>
+    <include layout="@layout/mafeed_toobar"/>
+
+    <View
+        android:id="@+id/saparator_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/recycle_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/saparator_view"
+        android:layout_marginTop="14dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/main_progress_bar"
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone"/>
 
 </RelativeLayout>
